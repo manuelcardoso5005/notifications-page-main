@@ -119,6 +119,10 @@ a:hover {
     justify-content: space-between;
 }
 
+.notification.picture .text img {
+    cursor: pointer;
+}
+
 .notification img {
     width: 2.5em;
     margin-right: 1em;
