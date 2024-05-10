@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+:root {
+    --Red: hsl(1, 90%, 64%);
+    --Blue: hsl(219, 85%, 26%);   
+    --White: hsl(0, 0%, 100%);
+    --VeryLightGrayishBlue: hsl(210, 60%, 98%);
+    --LightGrayishBlue1: hsl(211, 68%, 94%);
+    --LightGrayishBlue2: hsl(205, 33%, 90%);
+    --GrayishBlue: hsl(219, 14%, 63%);
+    --DarkGrayishBlue: hsl(219, 12%, 42%);
+    --VeryDarkBlue: hsl(224, 21%, 14%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--VeryLightGrayishBlue) ;
+    color: var(--DarkGrayishBlue);
+    min-width: 375px;
+}
+
+a {
+    color: var(--DarkGrayishBlue);
+    font-weight: 800;
+    transition: .3s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--Blue);
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#container #notification-content {
+    background-color: var(--White);
+    padding: 2em 2em 0 2em;
+    border-radius: 10px;
+    max-width: 650px;
+    min-width: 320px;
+}
+
+#notification-content .top-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+#notification-content .top-area p:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.top-area p:nth-child(1) span:nth-child(1) {
+    font-size: 1.5em;
+    font-weight: 800;
+    color: var(--VeryDarkBlue);
+}
+
+.top-area p:nth-child(1) span:nth-child(2) {
+    color: var(--White);
+    background-color: var(--Blue);
+    padding: 4px 14px;
+    margin-left: 1em;
+    border-radius: 6px;
+}
+
+#notification-content .top-area button {
+    color: var(--DarkGrayishBlue);
+    background-color: transparent;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+#notification-content .top-area button:hover {
+    color: var(--Blue);
+}
+
+.notification {
+    padding: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-radius: 10px;
+    margin-bottom: .4em;
+}
+
+.notification:nth-child(7) {
+    margin-bottom: 0;
+}
+
+.notification.non-read {
+    background-color: var(--VeryLightGrayishBlue);
+}
+
+.notification.picture .text {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.notification img {
+    width: 2.5em;
+    margin-right: 1em;
+}
+
+.text {
+    width: 100%;
+}
+
+.text-top {
+    line-height: 1.5em;
+}
+
+.bi {
+    color: var(--Red);
+    font-size: .4em;
+    margin-left: 1em;
+}
+
+.flex {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.message {
+    border: 1px solid hsl(211, 68%, 94%);
+    padding: 1em;
+    line-height: 1.5em;
+    user-select: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 1em;
+    transition: .3s;
+}
+
+.message:hover {
+    background-color: var(--LightGrayishBlue1);
+}
+
+@media screen and (max-width:900px) {
+    #container {
+        height: auto;
+    }
+}
